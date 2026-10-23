@@ -10,6 +10,7 @@ const currentTitle = computed(() => {
   const name = route.name;
   if (!name || name === "Dashboard") return "Dashboard";
   if (name === "Penduduk") return "Data Penduduk";
+  if (name === "DetailPenduduk") return "Detail Penduduk";
   if (name === "Keluarga") return "Data Keluarga";
   if (name === "Wilayah") return "Wilayah Desa";
   if (name === "Layanan") return "Pelayanan";

@@ -23,6 +23,11 @@ const routes = [
         component: () => import('../views/penduduk/PendudukView.vue')
       },
       {
+        path: 'penduduk/:id',
+        name: 'DetailPenduduk',
+        component: () => import('../views/penduduk/DetailPendudukView.vue')
+      },
+      {
         path: 'keluarga',
         name: 'Keluarga',
         component: () => import('../views/keluarga/KeluargaView.vue')
