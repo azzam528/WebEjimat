@@ -61,6 +61,16 @@ const routes = [
         path: 'audit',
         name: 'AuditLog',
         component: () => import('../views/audit/AuditLogView.vue')
+      },
+      {
+        path: 'audit/duplikat',
+        name: 'DuplicateDetection',
+        component: () => import('../views/audit/DuplicateDetectionView.vue')
+      },
+      {
+        path: 'audit/kualitas',
+        name: 'DataQuality',
+        component: () => import('../views/audit/DataQualityView.vue')
       }
     ]
   },
