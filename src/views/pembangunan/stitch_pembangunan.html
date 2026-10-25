@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pembangunan Desa - EJIMAT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#008378",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-primary": "#6bd8cb",
+                        "tertiary-container": "#a36700",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "outline-variant": "#bcc9c6",
+                        "inverse-surface": "#213145",
+                        "primary": "#00685f",
+                        "on-tertiary-fixed": "#2a1700",
+                        "secondary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary": "#565e74",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-surface": "#0b1c30",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#825100",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00201d",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3d4947",
+                        "surface-tint": "#006a61",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#89f5e7",
+                        "outline": "#6d7a77",
+                        "surface-variant": "#d3e4fe",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-container": "#f4fffc",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-secondary-fixed-variant": "#3f465c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "container-padding": "32px",
+                        "section-gap": "48px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        body { background-color: #F9FAFB; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col w-[280px] fixed h-full z-40 bg-inverse-surface border-r border-outline-variant overflow-y-auto">
+<div class="px-container-padding py-stack-lg border-b border-outline-variant/20 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center mb-stack-sm shadow-sm" data-alt="A clean, modern geometric logo representing village data management in teal and white, highly professional and corporate aesthetic, perfect for public sector software." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnjkJ7U0CHM2Am47q1KSPJ65W7xfL6dfwRA8Dr5x_yXxLh_LHBcodAyut__C9u2ILWENgPRnjG4176rZfvyhlM8mxhykENZyIoAJ4Nzdf_4l3AMhi7oWfEsKC3BoZtxz6F9iLZ7Zx9RuxxejIyeSs1RXhlO83jl3oHFKvdeAmkrevw31N0d05OynbaWUP0SoSpt4SjFfFZ74vqMoDH1d-5iyiiDnBuLvcWWtWapgad5tk8VM8SgwMIqQ')">
+<span class="material-symbols-outlined text-on-primary-container text-[32px]">dataset</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed">EJIMAT</h1>
+<p class="font-label-sm text-label-sm text-surface-variant/80 uppercase tracking-widest mt-1">Satu Data Desa</p>
+</div>
+<div class="flex-1 py-stack-md flex flex-col gap-1">
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-md text-label-md">Data Penduduk</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">family_restroom</span>
+<span class="font-label-md text-label-md">Data Keluarga</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-label-md text-label-md">Wilayah Desa</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md">Pelayanan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">report_problem</span>
+<span class="font-label-md text-label-md">Pengaduan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-label-md text-label-md">Data Kualitas</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md bg-primary-container text-on-primary-container border-l-4 border-primary font-bold opacity-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">construction</span>
+<span class="font-label-md text-label-md">Pembangunan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-label-md text-label-md">Berita &amp; Pengumuman</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label-md text-label-md">Laporan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Pengaturan</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 md:ml-[280px] w-full max-w-[calc(100%-280px)] min-h-screen bg-background pb-section-gap">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-container-padding h-16 z-30 sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm w-full">
+<div class="flex items-center gap-stack-md">
+<span class="font-label-md text-label-md text-on-surface-variant">EJIMAT Desa Cimenyan</span>
+<span class="text-outline-variant">/</span>
+<span class="font-label-md text-label-md text-primary font-bold">Pembangunan</span>
+</div>
+<div class="flex items-center gap-stack-md text-on-surface-variant">
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary-container overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A small, professional profile picture of an Indonesian civil servant wearing a formal khaki uniform, smiling slightly against a neutral grey background, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUAom62jRur0gQZsoIlyT2xuO4667GG8DhKGI1adxIGLRYsBDm168SI4EyV0dvKDFvkHuQYlEQvSKGZoWY61HXmG1mHH2dlH5jGSNfjMaCWoqAV_1iIjoV-sEsUlLAFOswJIVyH4QsRyPLlJbbBobbUQD6hOTvQZlt0ZqHrT89u5EDQd_zkaGE9YtsOB4VJJWttZ8G7wJqibF9TeN9vUeEGRQhjQo50-EaHB3B-wzCKIJhWmMPdLsMXg"/>
+</button>
+</div>
+</header>
+<!-- Page Content -->
+<main class="px-container-padding pt-section-gap">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-section-gap gap-stack-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Manajemen Proyek Pembangunan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Pantau progress, anggaran, dan status pembangunan desa terpadu.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md text-label-md shadow-sm hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Tambah Proyek Baru
+                </button>
+</div>
+<!-- Summary Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-section-gap">
+<!-- Total Proyek -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Proyek</span>
+<span class="material-symbols-outlined text-primary">account_tree</span>
+</div>
+<div class="z-10">
+<span class="font-display-lg text-display-lg text-on-surface">24</span>
+</div>
+</div>
+<!-- Sedang Berjalan -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sedang Berjalan</span>
+<span class="material-symbols-outlined text-tertiary">sync</span>
+</div>
+<div class="z-10 flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface">8</span>
+<span class="font-label-md text-label-md text-tertiary bg-tertiary-fixed px-2 py-0.5 rounded-full">Aktif</span>
+</div>
+</div>
+<!-- Selesai -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Selesai (Tahun Ini)</span>
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+</div>
+<div class="z-10">
+<span class="font-display-lg text-display-lg text-on-surface">12</span>
+</div>
+</div>
+<!-- Total Anggaran -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-surface-container-highest rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
+<div class="flex justify-between items-start z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Anggaran (Rp)</span>
+<span class="material-symbols-outlined text-on-surface">account_balance_wallet</span>
+</div>
+<div class="z-10">
+<span class="font-headline-md text-headline-md text-on-surface">1.25 M</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terserap: 78%</p>
+</div>
+</div>
+</div>
+<!-- Proyek List Section -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<div class="px-stack-lg py-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Daftar Proyek Berjalan</h3>
+<div class="flex gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface rounded-lg border-outline-variant text-body-sm focus:ring-primary focus:border-primary" placeholder="Cari proyek..." type="text"/>
+</div>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nama Proyek</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lokasi</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Anggaran</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Progress</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Selesai</th>
+<th class="py-4 px-6 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/50">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">add_road</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Perbaikan Jalan Desa</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Infrastruktur</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Dusun Mawar, RT 02</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Rp 150.000.000</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">75%</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant">Berjalan</span>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">15 Nov 2024</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-bold">Detail Proyek</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright transition-colors bg-background">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined">apartment</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Renovasi Posyandu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fasilitas Kesehatan</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Dusun Melati, RT 05</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Rp 75.000.000</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">30%</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed-variant">Berjalan</span>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">20 Des 2024</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-bold">Detail Proyek</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-4 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-fixed/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Saluran Irigasi Baru</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pertanian</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Blok Sawah Lor</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">Rp 200.000.000</td>
+<td class="py-4 px-6">
+<div class="flex items-center gap-2">
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">95%</span>
+</div>
+</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-container text-on-primary-container">Hampir Selesai</span>
+</td>
+<td class="py-4 px-6 font-body-sm text-body-sm text-on-surface">01 Nov 2024</td>
+<td class="py-4 px-6 text-right">
+<button class="font-label-sm text-label-sm text-primary hover:text-surface-tint font-bold">Detail Proyek</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 border-t border-outline-variant flex items-center justify-between bg-surface-bright">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Menampilkan 1-3 dari 8 proyek berjalan</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-outline-variant rounded hover:bg-surface-variant text-on-surface-variant text-label-sm font-label-sm">Sebelumnya</button>
+<button class="px-3 py-1 border border-outline-variant rounded hover:bg-surface-variant text-on-surface-variant text-label-sm font-label-sm bg-surface-variant">1</button>
+<button class="px-3 py-1 border border-outline-variant rounded hover:bg-surface-variant text-on-surface-variant text-label-sm font-label-sm">2</button>
+<button class="px-3 py-1 border border-outline-variant rounded hover:bg-surface-variant text-on-surface-variant text-label-sm font-label-sm">Selanjutnya</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
