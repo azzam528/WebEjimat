@@ -58,6 +58,11 @@ const routes = [
         component: () => import('../views/berita/BeritaView.vue')
       },
       {
+        path: 'laporan',
+        name: 'Laporan',
+        component: () => import('../views/laporan/LaporanView.vue')
+      },
+      {
         path: 'audit',
         name: 'AuditLog',
         component: () => import('../views/audit/AuditLogView.vue')
