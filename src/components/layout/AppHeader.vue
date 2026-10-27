@@ -18,6 +18,8 @@ const currentTitle = computed(() => {
   if (name === "AuditLog") return "Data Kualitas";
   if (name === "Pembangunan") return "Pembangunan";
   if (name === "Berita") return "Berita & Pengumuman";
+  if (name === "Laporan") return "Laporan & Statistik";
+  if (name === "Pengaturan") return "Pengaturan Sistem";
   return name;
 });
 </script>

@@ -76,6 +76,11 @@ const routes = [
         path: 'audit/kualitas',
         name: 'DataQuality',
         component: () => import('../views/audit/DataQualityView.vue')
+      },
+      {
+        path: 'pengaturan',
+        name: 'Pengaturan',
+        component: () => import('../views/pengaturan/PengaturanView.vue')
       }
     ]
   },

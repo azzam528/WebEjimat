@@ -25,6 +25,7 @@ const menuItems = [
   { name: "Pembangunan", path: "/pembangunan", icon: "construction" },
   { name: "Berita & Pengumuman", path: "/berita", icon: "newspaper" },
   { name: "Laporan", path: "/laporan", icon: "description" },
+  { name: "Pengaturan", path: "/pengaturan", icon: "settings" },
 ];
 
 const isActive = (path) => {

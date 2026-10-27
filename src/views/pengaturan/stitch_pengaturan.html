@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pengaturan - EJIMAT</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#008378",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#eff4ff",
+                        "inverse-primary": "#6bd8cb",
+                        "tertiary-container": "#a36700",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "outline-variant": "#bcc9c6",
+                        "inverse-surface": "#213145",
+                        "primary": "#00685f",
+                        "on-tertiary-fixed": "#2a1700",
+                        "secondary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary": "#565e74",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#005049",
+                        "on-surface": "#0b1c30",
+                        "primary-fixed-dim": "#6bd8cb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#825100",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00201d",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#3d4947",
+                        "surface-tint": "#006a61",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#89f5e7",
+                        "outline": "#6d7a77",
+                        "surface-variant": "#d3e4fe",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-container": "#f4fffc",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-fixed": "#ffddb8",
+                        "on-secondary-fixed-variant": "#3f465c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "container-padding": "32px",
+                        "section-gap": "48px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1; }
+        
+        /* Custom scrollbar for better UI */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background-color: #bcc9c6; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background-color: #6d7a77; }
+    </style>
+</head>
+<body class="bg-background text-on-background flex min-h-screen">
+<!-- JSON Component: SideNavBar -->
+<nav class="flex flex-col w-[280px] fixed h-full z-40 bg-inverse-surface border-r border-outline-variant transition-all duration-300 md:translate-x-0 -translate-x-full" id="sideNav">
+<!-- Brand Logo Area -->
+<div class="h-16 flex items-center px-container-padding border-b border-outline-variant/20 shrink-0">
+<img alt="Logo EJIMAT Village Data" class="h-8 w-8 rounded mr-3 object-contain bg-white/10 p-1" data-alt="A clean, minimalist vector logo for EJIMAT Village Data, using teal and white colors, set against a dark blue background. The logo incorporates subtle data nodes and a shield to represent security and reliable information management. The overall style is modern and official." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJh3ZbEzF1VIci5R9JKNUa_iuR6-dZDrX0IC8tPL9HlsaOukzBZB8csor_eRBAXzmUbMMKZIP7Z70KWfbN3Rys_CfyA6BliBsTMv-M0ih4wbNj9A9vcj-vvjJdZMF-HiJ6obXL7AjMUx9Quj67wqgrXO37fhBPrdUCyWULoy-83n5IsmyxwSSWQUxwJ65n0RRGclgQkuU6P7KNGRMdY6H9C8-UvHqWtryeHcsrFD7h7_ShnAMMB5yDuw"/>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary-fixed leading-tight">EJIMAT</h1>
+<p class="font-label-sm text-label-sm text-primary-fixed-dim opacity-80 leading-tight">Satu Data Desa</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 overflow-y-auto py-stack-md flex flex-col gap-1">
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">groups</span>
+<span class="font-label-md text-label-md">Data Penduduk</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">family_restroom</span>
+<span class="font-label-md text-label-md">Data Keluarga</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">map</span>
+<span class="font-label-md text-label-md">Wilayah Desa</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+<span class="font-label-md text-label-md">Pelayanan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">report_problem</span>
+<span class="font-label-md text-label-md">Pengaduan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">verified</span>
+<span class="font-label-md text-label-md">Data Kualitas</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">construction</span>
+<span class="font-label-md text-label-md">Pembangunan</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">campaign</span>
+<span class="font-label-md text-label-md">Berita &amp; Pengumuman</span>
+</a>
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md text-surface-variant hover:text-on-primary-fixed-variant hover:bg-on-surface-variant/10 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-xl">description</span>
+<span class="font-label-md text-label-md">Laporan</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-stack-md px-container-padding py-stack-md bg-primary-container text-on-primary-container border-l-4 border-primary font-bold opacity-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-xl filled">settings</span>
+<span class="font-label-md text-label-md">Pengaturan</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col min-h-screen md:ml-[280px] w-full max-w-full md:max-w-[calc(100%-280px)]">
+<!-- JSON Component: TopNavBar -->
+<header class="flex justify-between items-center px-container-padding w-full h-16 z-30 sticky top-0 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors cursor-pointer" onclick="document.getElementById('sideNav').classList.toggle('-translate-x-full')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="hidden md:flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span>Beranda</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-medium">Pengaturan</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<h2 class="hidden lg:block font-headline-sm text-headline-sm font-bold text-on-surface mr-4">EJIMAT Desa Cimenyan</h2>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer hover:bg-surface-variant/50">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer hover:bg-surface-variant/50">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="relative ml-2">
+<img alt="User Profile Profile" class="w-10 h-10 rounded-full object-cover border-2 border-surface-variant cursor-pointer hover:border-primary transition-colors" data-alt="A professional headshot of a village administrator, looking directly at the camera with a subtle smile. They are wearing a neat, official light blue uniform shirt typical of Indonesian civil servants. The background is a clean, neutral white with soft, flattering lighting suitable for a digital profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM2Kh1FzSc-Ubd5HLSnwq-k8s3gKzuFmSouEDsP7mXF3Jc9Jo-nQTCE_h0x2NAyYcSTx4EZ8e1pAFGlBoyVEKBUn54GAaIpDBgQ1u0HlV5rC74Hzt39VbNO7T9ETDBfIb58C4_31L08m3VJQSmquMGKmR5Tja_qVV9SkxOC3yJpFPDUSypdvw6HgttFu0Ywep0ZpqCPWyRh2Knp_73JUVbdE1jYVvTYXpkSdNB2oQw7TfyutNlZiRxFQ"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="flex-1 p-4 md:p-8 overflow-x-hidden">
+<div class="mb-section-gap flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg md:font-headline-lg md:text-headline-lg text-on-surface mb-2">Pengaturan Sistem</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Kelola konfigurasi platform EJIMAT, profil administrator, dan manajemen akses untuk seluruh pengguna di Desa Cimenyan.</p>
+</div>
+<button class="bg-primary hover:bg-on-primary-fixed-variant text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md font-medium flex items-center justify-center gap-2 transition-colors shadow-sm whitespace-nowrap w-full md:w-auto">
+<span class="material-symbols-outlined text-sm">save</span>
+                    Simpan Perubahan
+                </button>
+</div>
+<!-- Settings Layout: Sidebar Tabs + Content Area -->
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Inner Sidebar Navigation -->
+<div class="lg:w-64 shrink-0">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] overflow-hidden sticky top-24">
+<nav aria-label="Settings Navigation" class="flex flex-col">
+<!-- Group 1: Akun & Akses -->
+<div class="px-4 py-3 bg-surface-container/50 border-b border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Akun &amp; Akses</span>
+</div>
+<a class="flex items-center gap-3 px-4 py-3.5 bg-primary-container/10 border-l-4 border-primary text-primary font-medium hover:bg-surface-container transition-colors" href="#profil">
+<span class="material-symbols-outlined text-xl filled">person</span>
+<span class="font-label-md text-label-md">Profil Admin</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3.5 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors border-t border-outline-variant/30" href="#pengguna">
+<span class="material-symbols-outlined text-xl">manage_accounts</span>
+<span class="font-label-md text-label-md">Manajemen Pengguna</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3.5 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors border-t border-outline-variant/30" href="#roles">
+<span class="material-symbols-outlined text-xl">admin_panel_settings</span>
+<span class="font-label-md text-label-md">Roles &amp; Izin Akses</span>
+</a>
+<!-- Group 2: Sistem -->
+<div class="px-4 py-3 bg-surface-container/50 border-y border-outline-variant mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sistem</span>
+</div>
+<a class="flex items-center gap-3 px-4 py-3.5 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" href="#umum">
+<span class="material-symbols-outlined text-xl">tune</span>
+<span class="font-label-md text-label-md">Pengaturan Umum</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3.5 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors border-t border-outline-variant/30" href="#notifikasi">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+<span class="font-label-md text-label-md">Notifikasi</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3.5 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors border-t border-outline-variant/30" href="#audit">
+<span class="material-symbols-outlined text-xl">history</span>
+<span class="font-label-md text-label-md">Audit Log</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Settings Content Canvas -->
+<div class="flex-1 flex flex-col gap-8">
+<!-- Section: Profil Admin (Active) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] overflow-hidden" id="profil">
+<div class="px-6 py-5 border-b border-outline-variant bg-surface flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Profil Administrator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Perbarui informasi dasar dan kredensial akun Anda.</p>
+</div>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row gap-8">
+<!-- Avatar Upload -->
+<div class="flex flex-col items-center gap-4">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden border-4 border-surface-container bg-surface-variant">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional Indonesian civil servant, looking approachable and confident. He wears a standard khaki official uniform. The lighting is bright and evenly distributed, casting a clean, modern aesthetic suitable for a high-quality dashboard profile picture. The background is completely white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjvJHNSpokzKxzqurdPMsBt9AeKxJMzmrLTUcc7M-AcY1LFN5zmfFa7MTNt-BJ9lL4DTVdYkT10dacctEJfdH40y-GItdu9iMpa_Zeq2Sgjrnx9FybVS1HLnEQQqEsZrSp9quZ3kDrIhx-w26Q1U4M14xRlxqiD3JXpX0rOMPMoLJVH0lHXZsgeJ2aJPEvWwaH032-2_E0dfLxc0j8voG7bFuECtHMPbhH1ZH1CVxpZzXBSJemJbikow"/>
+</div>
+<button class="absolute bottom-0 right-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg hover:bg-on-primary-fixed-variant transition-colors border-2 border-white">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center max-w-[150px]">Format JPG, PNG max 2MB.</span>
+</div>
+<!-- Form Fields -->
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
+<div class="col-span-1 md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">Nama Lengkap</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md text-body-md" type="text" value="Ahmad Sudirman, S.Kom"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">Email Penugasan</label>
+<input class="w-full bg-surface border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all font-body-md text-body-md" type="email" value="admin@cimenyan.desa.id"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">Nomor Induk Pegawai (NIP)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface-variant focus:outline-none cursor-not-allowed font-body-md text-body-md" disabled="" type="text" value="198507232010011015"/>
+</div>
+<div class="col-span-1 md:col-span-2 pt-4 border-t border-outline-variant/50 mt-2">
+<h4 class="font-label-md text-label-md text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-secondary">lock</span>
+                                            Keamanan Akun
+                                        </h4>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between p-4 rounded-lg border border-outline-variant bg-surface-bright">
+<div>
+<p class="font-label-md text-label-md text-on-surface">Kata Sandi</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terakhir diubah 3 bulan yang lalu.</p>
+</div>
+<button class="px-4 py-2 border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors whitespace-nowrap">Ubah Kata Sandi</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>
